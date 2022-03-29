@@ -92,7 +92,9 @@ public class LoginStepDefs {
     @Then("User sees the inputed data {string} to {string} on the page")
     public void user_sees_the_inputed_data_to_on_the_page(String starDateTime, String endDateTime) {
 
+        BrowserUtillities.waitFor(1);
         assertTrue(testProjectPage.startDateInfo.getText().contains(starDateTime));
+        BrowserUtillities.waitFor(1);
         assertTrue(testProjectPage.endDateInfo.getText().contains(endDateTime));
 
     }
